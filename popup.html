@@ -5,49 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lo-Fi Timer</title>
     <link rel="stylesheet" href="css/popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Lo-Fi Timer</h1>
-
-      <div class="track-selection">
-        <h2>Select Track</h2>
-        <select id="track-selector">
-          <option value="track1">Chill Beats</option>
-          <option value="track2">Study Session</option>
-          <option value="track3">Relaxing Vibes</option>
-          <option value="track4">Focus Flow</option>
-        </select>
+      <div class="app-header">
+        <h1>Lo-Fi Timer</h1>
       </div>
 
-      <div class="timer-section">
-        <h2>Set Timer</h2>
-        <div class="timer-inputs">
-          <div class="time-input">
-            <label for="hours">Hours</label>
-            <input type="number" id="hours" min="0" max="23" value="0" />
+      <div class="card track-selection">
+        <div class="card-content">
+          <div class="card-header">
+            <h2>Select Track</h2>
           </div>
-          <div class="time-input">
-            <label for="minutes">Minutes</label>
-            <input type="number" id="minutes" min="0" max="59" value="30" />
-          </div>
-          <div class="time-input">
-            <label for="seconds">Seconds</label>
-            <input type="number" id="seconds" min="0" max="59" value="0" />
+          <div class="select-wrapper">
+            <select id="track-selector" class="acrylic-select">
+              <option value="track1">Interstellar</option>
+              <option value="track2">Study Session</option>
+              <option value="track3">Relaxing Vibes</option>
+              <option value="track4">Focus Flow</option>
+            </select>
           </div>
         </div>
       </div>
 
-      <div class="controls">
-        <button id="play-btn" class="btn">Play</button>
-        <button id="pause-btn" class="btn" disabled>Pause</button>
-        <button id="stop-btn" class="btn" disabled>Stop</button>
+      <div class="card timer-section">
+        <div class="card-content">
+          <div class="card-header">
+            <h2>Set Timer</h2>
+          </div>
+          <div class="timer-inputs">
+            <div class="time-input">
+              <label for="hours">Hours</label>
+              <input
+                type="number"
+                id="hours"
+                min="0"
+                max="23"
+                value="0"
+                class="acrylic-input"
+              />
+            </div>
+            <div class="time-input">
+              <label for="minutes">Minutes</label>
+              <input
+                type="number"
+                id="minutes"
+                min="0"
+                max="59"
+                value="30"
+                class="acrylic-input"
+              />
+            </div>
+            <div class="time-input">
+              <label for="seconds">Seconds</label>
+              <input
+                type="number"
+                id="seconds"
+                min="0"
+                max="59"
+                value="0"
+                class="acrylic-input"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="timer-display">
-        <div id="time-remaining">00:00:00</div>
-        <div class="progress-bar">
-          <div id="progress"></div>
+      <div class="card controls-card">
+        <div class="card-content">
+          <div class="controls">
+            <button id="play-btn" class="btn glow-btn play-btn">
+              <span class="btn-content">Play</span>
+            </button>
+            <button id="pause-btn" class="btn glow-btn pause-btn" disabled>
+              <span class="btn-content">Pause</span>
+            </button>
+            <button id="stop-btn" class="btn glow-btn stop-btn" disabled>
+              <span class="btn-content">Stop</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card timer-display-card">
+        <div class="card-content">
+          <div id="time-remaining">00:00:00</div>
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div id="progress" class="progress-fill"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
